@@ -26,8 +26,8 @@ Merge mechanics:
 | agentkern  | core + python           |
 | kultur-stp | core + svelte           |
 
-qt.md is not yet extracted (lives in craftwerk's READ_FIRST until its own
-carve pass).
+All layers are extracted. A layer's own findings still grow from project
+work through the feedback loop below.
 
 ## The feedback loop
 The agent extracts a new finding into the matching shared layer at checkout.
