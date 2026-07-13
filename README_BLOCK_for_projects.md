@@ -7,4 +7,4 @@ No agent tools like Claude Code or Codex are involved. Every step is executed ma
 
 The READ_FIRST in this repo describes exactly how I work with the AI so the reader has a transparent view of the process.
 
-Full policy: <link to AI_POLICY.md in the .github repo>
+Full policy: https://github.com/zPirx/.github/blob/main/AI_POLICY.md
