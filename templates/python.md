@@ -54,6 +54,15 @@ Merged after core. Fills core's [ADAPT] slots for a Python codebase.
 - An editable-installed (-e) shared package makes the OTHER repo's tree part of
   THIS app's live runtime - before editing the shared package ask "which hosts
   are live"; before debugging host weirdness check the package's git status too.
+- Test engine logic with NO GPU or weights by stubbing the heavy deps
+  (`module.fn = lambda ...`), then call the pure functions - deterministic and
+  instant.
+- A new user-facing verb ships WITH a harness scenario in the same patch,
+  exercising verb -> continue -> verb. A verb with no scenario is the lurk-space
+  where a state bug hides until live use.
+- When there is no automated suite, the ladder IS the suite: a no-deps unit
+  stub, then an end-to-end call, then a human confirm. Name which rung a check
+  belongs to.
 
 ## 4. RECONCILE ASSERTS (plug into preflight_core.sh)
 
