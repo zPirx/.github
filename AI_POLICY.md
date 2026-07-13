@@ -6,7 +6,7 @@ The code here is AI-drafted but human-directed and human-verified. I design the 
 
 No autonomous agent tools like Claude Code or Codex are used. The AI assists but does not act on its own.
 
-The READ_FIRST template in this repo shows the exact workflow.
+My working method and verification routine are documented in the templates here: https://github.com/zPirx/.github/tree/main/templates
 
 I am not a native English speaker and I use AI to help me write clearly. The technical decisions and the responsibility for them are mine.
 
