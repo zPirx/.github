@@ -39,6 +39,13 @@ running the check, never by asking the human.
 on its own initiative; at checkout they distribute to durable homes. A note is a
 CLAIM until it lands.
 
+**Doc homes.** Private working state lives in `dev/` (READ_FIRST, the baton,
+patches, the plan-of-record, the user inbox) and is git-excluded. Public
+documentation lives in `docs/` (API references, user guides) and is tracked.
+A folder named `docs/` that holds working state misleads a reader and risks
+excluding a public doc by accident. Keep the two separate. [ADAPT: a project
+with no public docs may keep only `dev/`.]
+
 ---
 
 ## 1. DELIVERY (HARD)
