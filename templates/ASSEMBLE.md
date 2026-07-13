@@ -6,16 +6,25 @@ project start. The combined file is committed and read each session. Re-merge
 only when a template materially changes. The merge is a build-time step
 producing a real file - NOT a runtime overlay.
 
-Merge mechanics:
-1. core.md is the skeleton - its section numbering (s0-s16) is the project's.
-2. Each layer's sections state which core section they extend or fill
-   ("extend core s4", "fills core s2.1") - splice the layer bullets into that
-   core section; layer finding clusters append into core s14 under their own
-   cluster heading.
-3. Fill every `[ADAPT]` slot with the project's facts before first use - grep
-   `[ADAPT` to find them all; none may survive into a working READ_FIRST.
-4. Project-LOCAL rules (store paths, model quirks, launch flags) go into the
-   merged file's s16 - never back into a shared layer.
+Merge guideline (an agent implements this; the steps are intent, not an
+algorithm):
+- core.md is the skeleton. The language and framework layers extend it. Each
+  layer's sections name the core section they relate to ("extend core s4",
+  "fills core s2.1") so the agent knows where their content belongs.
+- The agent decides how to combine them for a readable result: fold a layer's
+  content into the matching core section, or keep it as a labelled block after
+  core. Either works. The output is one coherent READ_FIRST the project reads
+  each session.
+- Fill every `[ADAPT]` slot with the project's facts before first use. Grep
+  `[ADAPT` to find them all. None may survive into a working READ_FIRST.
+- A layer entry that does not fit the project (a backend assert on a project
+  with no such backend) is noted in the merged file's s16 as not applicable,
+  rather than carried silently.
+- Project-local rules (store paths, model quirks, launch flags) live in the
+  merged file's s16. They never go back into a shared layer.
+
+Another harness can read the layers the same way: treat core as the base
+working agreement and the language and framework layers as additions to it.
 
 ## Layer map (one home per layer, never duplicated)
 | project    | layers                  |
