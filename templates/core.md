@@ -435,6 +435,10 @@ fat preset defeats the point.
 - A `||` inside `$(...)` guards only the NEXT command - wrap the whole fallback;
   a syntax check never proves command-substitution behavior, RUN the script.
 - Never reason about a folder's contents without listing it first.
+- A pty child that grabs the tty (a pager, a full-screen program) RE-ENABLES
+  echo on exit - a termios echo-off set once at spawn is not durable. Re-assert
+  it before every command send, or echoed input doubles a done-sentinel and the
+  read never seals. Set PAGER/GIT_PAGER=cat in the pty env, not only TERM=dumb.
 - MULTIPLE repos can share one workflow - verify pwd/git-toplevel before any
   patch or probe; patch numbers are per-repo (`ls patches/ | sort -V | tail -1`).
 
