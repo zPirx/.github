@@ -7,3 +7,7 @@ Shared defaults for my repositories.
 - [templates/](templates/) holds the composable READ_FIRST layers I merge
   into each project's working agreement. The
   [templates/README](templates/README.md) explains the layers.
+
+## AI workflow
+The READ_FIRST template system and the AI policy moved to
+[ai-workflow](https://github.com/zPirx/ai-workflow).
